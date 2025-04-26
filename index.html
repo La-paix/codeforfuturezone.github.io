@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Code For Future Zone - Une communauté d'innovateurs et de développeurs partageant des solutions open-source pour façonner un monde meilleur.">
+  <meta name="author" content="Code For Future Zone Team">
+  <meta name="robots" content="index, follow">
+  <title>Code For Future Zone</title>
+  
+  <!-- Sécurisation de la page -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS intégré pour la mise en page sécurisée et optimisée */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #000;
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom: 5px solid #00ffcc;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    header .tagline {
+      font-size: 1.2em;
+      color: #aaa;
+    }
+
+    header .community-description {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+
+    header .quote {
+      font-size: 1.5em;
+      color: #00ffcc;
+      margin-top: 30px;
+    }
+
+    main {
+      padding: 30px;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+
+    main a {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 20px;
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    main a:hover {
+      background-color: #00e5b4;
+    }
+
+    .form-section {
+      background-color: #222;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 10px;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .form-section input[type="submit"] {
+      background-color: #00ffcc;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .form-section input[type="submit"]:hover {
+      background-color: #00e5b4;
+    }
+
+    .socials a {
+      margin: 10px;
+      font-size: 2em;
+      color: #00ffcc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #00e5b4;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Code For Future Zone</h1>
+    <p class="tagline">Construire le futur avec du code. Une ligne à la fois. Une communauté à la fois.</p>
+
+    <section class="intro-message">
+      <p class="description-fr">
+        Cette première version du site présente une page d’accueil moderne, sécurisée et inspirante, pensée pour rassembler une communauté de développeurs, créatifs et passionnés de technologie.<br>
+        Elle pose les bases d’un écosystème tourné vers l’avenir du code, de l’innovation et du partage de savoir.
+      </p>
+      <p class="description-en">
+        This first version introduces a modern, secure, and inspiring homepage designed to attract a forward-thinking community of developers, creatives, and tech enthusiasts.<br>
+        It lays the foundation for an ecosystem focused on the future of coding, innovation, and knowledge sharing.
+      </p>
+    </section>
+
+    <p class="community-description">
+      Code For Future Zone est une communauté d'innovateurs, développeurs, designers et rêveurs qui croient que la technologie peut façonner un monde meilleur.<br>
+      Nous créons, partageons et bâtissons ensemble des solutions open-source pour le bien de tous. Si tu crois au pouvoir du collectif, rejoins-nous.
+    </p>
+
+    <p class="quote">"Le code est le langage des bâtisseurs de demain."</p>
+  </header>
+
+  <main>
+    <section class="cta">
+      <a href="#projects">Nos Projets</a>
+      <a href="#join">Rejoindre la mission</a>
+    </section>
+
+    <section class="form-section" id="join">
+      <h2>Rejoignez la communauté !</h2>
+      <form action="mailto:team@codeforfuturezone.co" method="post" enctype="text/plain" onsubmit="return validateForm()">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Pourquoi voulez-vous rejoindre ?" required></textarea>
+        <input type="submit" value="Envoyer" />
+      </form>
+    </section>
+
+    <section class="socials">
+      <h2>Connecte-toi avec nous</h2>
+      <a href="https://twitter.com" title="Twitter">🐦</a>
+      <a href="https://instagram.com" title="Instagram">📸</a>
+      <a href="https://github.com" title="GitHub">💻</a>
+      <a href="https://linkedin.com" title="LinkedIn">💼</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Code For Future Zone. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      var name = document.forms[0]["name"].value;
+      var email = document.forms[0]["email"].value;
+      if (name == "" || email == "") {
+        alert("Tous les champs sont requis !");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>
