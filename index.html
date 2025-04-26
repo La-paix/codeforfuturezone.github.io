@@ -2,21 +2,23 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Code For Future Zone - Imagine. Code. Inspire. Une communauté innovante et open-source." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Code For Future Zone - Imagine. Code. Inspire.">
+  <meta name="author" content="Code For Future Zone Team">
   <title>Code For Future Zone</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #00ffe7;
-      --bg-dark: #0a0a0f;
-      --bg-gradient: linear-gradient(135deg, #00ffe7 0%, #6a00ff 100%);
-      --text-light: #ffffff;
-      --accent: #1e1e2f;
+      --main-color: #00ffff;
+      --bg-color: #0d0d0d;
+      --text-color: #ffffff;
+      --accent-color: #1f1f1f;
+      --twitter: #000000;
+      --instagram: #C13584;
+      --github: #333333;
+      --linkedin: #0077b5;
     }
 
     * {
@@ -26,51 +28,53 @@
     }
 
     body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
+      padding: 60px 20px 30px;
       text-align: center;
-      padding: 80px 20px 40px;
-      background: var(--bg-gradient);
+      background: linear-gradient(160deg, #10101a, #181828);
     }
 
     header h1 {
-      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      color: #000;
-      text-shadow: 0 0 10px #00ffe7;
+      color: var(--main-color);
+      text-shadow: 0 0 15px var(--main-color);
     }
 
-    header .slogan {
-      margin-top: 10px;
+    .slogan {
+      font-size: 1.3rem;
+      margin: 10px 0 25px;
+      color: #ccc;
+    }
+
+    .quote {
       font-size: 1.4rem;
       font-weight: 600;
-    }
-
-    header .quote {
+      color: var(--main-color);
       margin-top: 20px;
-      font-style: italic;
-      font-size: 1.1rem;
     }
 
     .cta {
-      text-align: center;
-      padding: 40px 20px;
+      margin: 40px 0;
     }
 
     .cta a {
-      background-color: #00ffe7;
+      text-decoration: none;
+      background-color: var(--main-color);
       color: #000;
       padding: 14px 30px;
-      text-decoration: none;
-      margin: 10px;
       border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.3s ease, background 0.3s ease;
+      font-weight: 600;
+      margin: 10px;
+      display: inline-block;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .cta a:hover {
@@ -78,37 +82,80 @@
       transform: scale(1.05);
     }
 
-    .socials {
+    main {
+      padding: 50px 20px;
       text-align: center;
-      margin: 60px 0;
+      flex: 1;
+    }
+
+    .form-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: var(--accent-color);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-section h2 {
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #2a2a3a;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: var(--main-color);
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00d4c5;
+    }
+
+    .socials {
+      margin-top: 60px;
     }
 
     .socials h2 {
+      font-size: 1.3rem;
       margin-bottom: 20px;
-      color: var(--primary);
     }
 
-    .socials a {
-      margin: 0 15px;
-      display: inline-block;
-    }
-
-    .socials img {
+    .socials a img {
       width: 40px;
       height: 40px;
-      transition: transform 0.3s;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
     }
 
     .socials a:hover img {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
 
     footer {
-      background-color: #0f0f17;
+      background-color: #0d0d15;
       padding: 25px;
       text-align: center;
       font-size: 0.9rem;
-      border-top: 1px solid #1a1a2e;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .cta a { padding: 10px 20px; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -120,26 +167,38 @@
     <p class="quote">"Le code est le langage des bâtisseurs de demain."</p>
   </header>
 
-  <section class="cta">
-    <a href="#projects">Nos Projets</a>
-    <a href="#join">Rejoindre la mission</a>
-  </section>
+  <main>
+    <section class="cta">
+      <a href="#projects">Nos Projets</a>
+      <a href="#join">Rejoindre la mission</a>
+    </section>
 
-  <section class="socials">
-    <h2>Connecte-toi avec nous</h2>
-    <a href="https://twitter.com" target="_blank" title="Twitter">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter" style="filter: invert(0.7);">
-    </a>
-    <a href="https://instagram.com" target="_blank" title="Instagram">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="filter: invert(0.7);">
-    </a>
-    <a href="https://github.com" target="_blank" title="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="filter: invert(0.7);">
-    </a>
-    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="filter: invert(0.7);">
-    </a>
-  </section>
+    <section class="form-section" id="join">
+      <h2>Rejoignez la communauté !</h2>
+      <form action="mailto:team@codeforfuturezone.co" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Pourquoi voulez-vous rejoindre ?" required></textarea>
+        <input type="submit" value="Envoyer">
+      </form>
+    </section>
+
+    <section class="socials">
+      <h2>Connecte-toi avec nous</h2>
+      <a href="https://twitter.com" target="_blank" title="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+      </a>
+      <a href="https://instagram.com" target="_blank" title="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://github.com" target="_blank" title="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Code For Future Zone. Tous droits réservés.</p>
